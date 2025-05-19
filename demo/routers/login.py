@@ -31,12 +31,12 @@ def login(request:OAuth2PasswordRequestForm=Depends(),db:Session=Depends(get_db)
     seller=db.query(models.User).filter(models.User.username==request.username).first()
     if not seller:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail='invalid user')
-    if not pwd_context.verify(request.password,seller.password):
+    if not pwd_context.verify(request.password,user.password):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='invalid password')
 
     #Gen JWT Token
     access_token=generate_token(
-        data={'sub':seller.username}
+        data={'sub':user.username}
     )
     return {"access_token":access_token,"token_type":"bearer"}
 
