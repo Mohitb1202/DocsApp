@@ -1,20 +1,20 @@
-# DocApp
+This Project is created by Angular CLI 16.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+to generate an app we use ng new app_name command
 
-## Development server
+to generate a component we use ng generate component component_name command
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Html,css and typescript files are generated
 
-## Code scaffolding
+A typescript(.ts) file is connected with html file to create a complete component
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After this logic for customer,login logout and register components are created
 
-## Build
+In this Project I use fastapi to create backend API's
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Use pip install fastapi command to install fastapi
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+create a model for registering the users and implemented Oauth and JWT authentication .
 
 FastAPI run command-
 
